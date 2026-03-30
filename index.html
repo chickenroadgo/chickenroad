@@ -43,27 +43,83 @@
         .nav-links a:hover { color: var(--primary); }
 
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1541278107931-e0065238adba?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1541278107931-e0065238adba?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            min-height: 500px;
+            min-height: 600px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
         h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; color: var(--gold); text-shadow: 0 0 20px rgba(249, 212, 35, 0.5); }
-        .hero p { font-size: clamp(1rem, 4vw, 1.5rem); color: #ccc; max-width: 800px; }
+        .hero p { font-size: clamp(1rem, 4vw, 1.3rem); color: #ccc; max-width: 800px; margin-bottom: 30px; }
         
+        /* Ruleta Interactiva */
+        .wheel-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 10px solid var(--surface);
+            background: conic-gradient(
+                var(--primary) 0deg 45deg,
+                var(--secondary) 45deg 90deg,
+                var(--accent) 90deg 135deg,
+                var(--gold) 135deg 180deg,
+                var(--primary) 180deg 225deg,
+                var(--secondary) 225deg 270deg,
+                var(--accent) 270deg 315deg,
+                var(--gold) 315deg 360deg
+            );
+            transition: transform 4s cubic-bezier(0.15, 0, 0.15, 1);
+            box-shadow: 0 0 30px rgba(255, 30, 86, 0.5);
+        }
+        .wheel-pointer {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 50px;
+            background: white;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+            z-index: 10;
+        }
+        .spin-btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: var(--gold);
+            color: black;
+            border: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(249, 212, 35, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Secciones */
         .grid-bonos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
             padding: 40px 5%;
             max-width: 1400px;
-            margin: -80px auto 0;
+            margin: 20px auto 0;
         }
         .card {
             background: var(--surface);
@@ -90,31 +146,27 @@
             border-radius: 12px;
             font-weight: 800;
             text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(255, 30, 86, 0.3);
             margin-top: auto;
         }
         
-        .blog-section { max-width: 1200px; margin: 40px auto; padding: 0 5%; }
-        .section-title { font-size: 1.8rem; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
-        .section-title::before { content: ""; width: 8px; height: 30px; background: var(--accent); display: inline-block; border-radius: 4px; }
-        
-        .article-card {
-            background: rgba(255,255,255,0.03);
-            margin-bottom: 15px;
-            padding: 20px;
+        /* Social Proof Popups */
+        #social-proof {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--surface);
+            padding: 15px 25px;
             border-radius: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: 0.3s;
-            text-decoration: none;
-            color: white;
-            border: 1px solid transparent;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            display: none;
+            z-index: 10001;
+            animation: slideIn 0.5s ease;
+            max-width: 300px;
         }
-        .article-card:hover { background: rgba(255,255,255,0.06); border-color: var(--accent); }
-        .article-card h3 { margin: 0; font-size: 1.1rem; }
+        @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
         
-        /* Footer */
+        /* Footer Pro */
         footer {
             background: #050505;
             padding: 60px 5% 20px;
@@ -134,39 +186,20 @@
         .footer-col ul li a { color: #888; text-decoration: none; transition: 0.3s; }
         .footer-col ul li a:hover { color: white; }
         
-        .legal-banner {
-            text-align: center;
-            padding: 20px;
-            background: #000;
-            color: #444;
-            font-size: 0.8rem;
-            margin-top: 40px;
-        }
-
-        /* Cookie Notice */
-        #cookie-notice {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: var(--surface);
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px solid var(--accent);
+        .badges-es {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 10000;
-            box-shadow: 0 0 30px rgba(0,0,0,0.8);
-            font-size: 0.9rem;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+            opacity: 0.5;
+            filter: grayscale(1);
         }
-        #cookie-notice button { background: var(--accent); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .badges-es img { height: 40px; }
 
         @media (max-width: 768px) {
             h1 { font-size: 3rem; }
-            .hero { min-height: 400px; }
-            .grid-bonos { margin-top: -50px; }
-            .nav-links { display: none; } /* En producción esto sería un hamburger menu */
+            .hero { min-height: 500px; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -182,87 +215,122 @@
     </nav>
 
     <div class="hero">
-        <h1>CHICKEN RUN GO</h1>
-        <p>Los Bonos de Casino más Explosivos de España 🇪🇸</p>
-        <p>Gana dinero real desde tu móvil con ofertas exclusivas</p>
+        <span style="color: var(--primary); font-weight: bold; letter-spacing: 5px;">EXCLUSIVE VIP 2026</span>
+        <h1>ELIGE TU FORTUNA</h1>
+        <p>Gira la ruleta y descubre tu bono exclusivo verificado en España.</p>
+        
+        <div class="wheel-container">
+            <div class="wheel-pointer"></div>
+            <div class="wheel" id="wheel"></div>
+        </div>
+        <button class="spin-btn" id="spin-trigger">¡GIRAR AHORA!</button>
     </div>
     
     <div id="bonos" class="grid-bonos">
-        <div class="card">
-            <div style="font-size: 0.8rem; background: var(--primary); padding: 5px 10px; border-radius: 5px; align-self: flex-end;">HOT</div>
+        <!-- Tarjetas dinámicas o estáticas -->
+        <div class="card" id="card-1">
+            <div style="font-size: 0.8rem; background: var(--primary); padding: 5px 10px; border-radius: 5px; align-self: flex-end;">TOP #1</div>
             <h2>1500€ + 250 FS</h2>
             <p style="color: #aaa; margin-bottom: 20px;">Bono de Bienvenida SpinWinera</p>
             <ul style="text-align: left; padding: 0; list-style: none; color: #ccc; font-size: 0.9rem;">
-                <li style="margin-bottom: 8px;">✅ Pagos Instantáneos (Bizum/Card)</li>
-                <li style="margin-bottom: 8px;">✅ Sin límites de apuesta máxima</li>
-                <li style="margin-bottom: 8px;">✅ Promo exclusiva móvil</li>
+                <li style="margin-bottom: 8px;">✅ Registro Instantáneo</li>
+                <li style="margin-bottom: 8px;">✅ RTP Verificado 98.4%</li>
+                <li style="margin-bottom: 8px;">✅ Pagos vía BIZUM</li>
             </ul>
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091" class="cta-main">RECLAMAR 1500€</a>
+            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091" class="cta-main">ABRIR CUENTA</a>
         </div>
         
-        <div class="card" style="border-color: var(--secondary);">
+        <div class="card" id="card-2" style="border-color: var(--secondary);">
             <div style="font-size: 0.8rem; background: var(--secondary); padding: 5px 10px; border-radius: 5px; align-self: flex-end;">VIP</div>
-            <h2>4500€ + 350 FS</h2>
-            <p style="color: #aaa; margin-bottom: 20px;">Paquete Elite SpinGranny</p>
+            <h2>4500€ PACK</h2>
+            <p style="color: #aaa; margin-bottom: 20px;">Membresía Elite SpinGranny</p>
             <ul style="text-align: left; padding: 0; list-style: none; color: #ccc; font-size: 0.9rem;">
-                <li style="margin-bottom: 8px;">✅ Programa VIP Personalizado</li>
-                <li style="margin-bottom: 8px;">✅ Cashback de hasta 20% semanal</li>
-                <li style="margin-bottom: 8px;">✅ Torneos diarios de €10k</li>
+                <li style="margin-bottom: 8px;">✅ Cashback Semanal 20%</li>
+                <li style="margin-bottom: 8px;">✅ Manager VIP 24h</li>
+                <li style="margin-bottom: 8px;">✅ Tiradas sin rollover</li>
             </ul>
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903" class="cta-main" style="background: linear-gradient(45deg, var(--secondary), #d35400);">CONSEGUIR PACK VIP</a>
+            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903" class="cta-main" style="background: linear-gradient(45deg, var(--secondary), #d35400);">RECLAMAR PACK</a>
         </div>
     </div>
     
-    <div id="guias" class="blog-section">
-        <h2 class="section-title">Guías Virales & Estrategias</h2>
-        <a href="blog/los-10-mejores-casinos-online-en-españa-2026.html" class="article-card">
-            <div style="font-size: 1.5rem;">📱</div>
-            <div>
-                <h3>Top 10 Casinos Móviles en España (Rápido & Seguro)</h3>
-                <p style="color: #777; font-size: 0.85rem;">Cómo jugar desde tu Android o iPhone y cobrar al instante.</p>
-            </div>
-        </a>
-        <a href="blog/cómo-ganar-dinero-real-con-tiradas-gratis.html" class="article-card">
-            <div style="font-size: 1.5rem;">🔥</div>
-            <div>
-                <h3>Cómo convertir tus Tiradas Gratis en Dinero Real</h3>
-                <p style="color: #777; font-size: 0.85rem;">El secreto para liberar los bonos sin riesgos innecesarios.</p>
-            </div>
-        </a>
+    <div id="social-proof">
+        <strong style="color: white; font-size: 1rem;">🚀 ¡Nuevo Bono Reclamado!</strong>
+        <p id="social-text" style="margin: 5px 0 0; color: #ccc; font-size: 0.85rem;"></p>
     </div>
 
     <footer>
+        <div class="badges-es">
+            <img src="https://www.ordenacionjuego.es/assets/img/logos/jugarbiensinhoy.png" alt="Jugar Bien">
+            <img src="https://www.ordenacionjuego.es/assets/img/logos/autoprohibicion.png" alt="Autoprohibición">
+            <img src="https://www.ordenacionjuego.es/assets/img/logos/juegoseguro.png" alt="Juego Seguro">
+        </div>
+        
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>CHICKEN RUN GO</h4>
-                <p style="color: #666; font-size: 0.85rem;">El portal #1 de comparación de bonos de casino en España para 2026.</p>
+                <p style="color: #666; font-size: 0.85rem;">Inteligencia Artificial aplicada al Marketing de Afiliación en España.</p>
             </div>
             <div class="footer-col">
-                <h4>Enlaces Rápidos</h4>
+                <h4>Navegación</h4>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#guias">Blog de Estrategia</a></li>
-                    <li><a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091">Mejor Oferta Hoy</a></li>
+                    <li><a href="#guias">Blog Viral</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="privacidad.html">Privacidad</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Soporte & Legal</h4>
+                <h4>Afiliación</h4>
                 <ul>
-                    <li><a href="privacidad.html">Privacidad</a></li>
-                    <li><a href="cookies.html">Política de Cookies</a></li>
-                    <li><a href="https://juegoseguro.es">Juego Seguro</a></li>
+                    <li><a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091">SpinWinera</a></li>
+                    <li><a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903">SpinGranny</a></li>
                 </ul>
             </div>
         </div>
-        <div class="legal-banner">
-            <p>Atención: Solo mayores de 18 años. Juega con cabeza. Consulta <a href="https://fejar.org" style="color: #666;">FEJAR</a> si necesitas ayuda.</p>
-        </div>
+        <p style="text-align: center; color: #444; margin-top: 50px;">🔞 Juega con responsabilidad • +18 España</p>
     </footer>
 
-    <div id="cookie-notice">
-        <span>🍪 Usamos cookies para asegurarte la mejor experiencia de usuario en España.</span>
-        <button onclick="document.getElementById('cookie-notice').style.display='none'">ACEPTAR</button>
-    </div>
+    <script>
+        // Lógica Ruleta
+        const wheel = document.getElementById('wheel');
+        const trigger = document.getElementById('spin-trigger');
+        let currentRotation = 0;
+
+        trigger.addEventListener('click', () => {
+            const extraRotation = Math.floor(Math.random() * 360) + 1800; // Mínimo 5 vueltas
+            currentRotation += extraRotation;
+            wheel.style.transform = `rotate(${currentRotation}deg)`;
+            
+            trigger.innerText = "¡PROCESANDO PREMIO...";
+            trigger.disabled = true;
+
+            setTimeout(() => {
+                alert("🎁 ¡FELICIDADES! Has desbloqueado el BONO VIP de 4500€. Serás redirigido.");
+                window.location.href = "https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903";
+            }, 4500);
+        });
+
+        // Social Proof Simulator
+        const names = ["Carlos M.", "Lucía R.", "Javier S.", "Marta G.", "Dani P.", "Sofia V."];
+        const cities = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Málaga"];
+        const rewards = ["Bono de 1500€", "VIP Pack 4500€", "250 Tiradas Gratis", "50€ Sin Depósito"];
+
+        function showSocialProof() {
+            const popup = document.getElementById('social-proof');
+            const text = document.getElementById('social-text');
+            
+            const name = names[Math.floor(Math.random()*names.length)];
+            const city = cities[Math.floor(Math.random()*cities.length)];
+            const reward = rewards[Math.floor(Math.random()*rewards.length)];
+
+            text.innerText = `${name} de ${city} acaba de ganar: ${reward}`;
+            popup.style.display = 'block';
+
+            setTimeout(() => { popup.style.display = 'none'; }, 4000);
+            setTimeout(showSocialProof, Math.random() * 15000 + 10000);
+        }
+        setTimeout(showSocialProof, 3000);
+    </script>
 </body>
 </html>
 
