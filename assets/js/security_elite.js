@@ -13,11 +13,14 @@ const EliteSecurity = {
     apply: function() {
         document.querySelectorAll("[data-elite-id]").forEach(el => {
             const id = el.getAttribute("data-elite-id");
-            if (this.links[id]) {
+            if (this.links[id] && !el.dataset.applied) {
                 el.href = this.decode(id);
+                el.dataset.applied = "true";
             }
         });
     }
 };
 
+// Polling suave para manejar el renderizado asíncrono de React
+setInterval(() => EliteSecurity.apply(), 1000);
 window.onload = () => EliteSecurity.apply();

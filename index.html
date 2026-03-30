@@ -1,346 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicken Run Go | Los Mejores Bonos de Casino en España 2026</title>
-    <meta name="description" content="Descubre los bonos de casino más exclusivos de España. Gira la Lucky Wheel, consigue hasta 4500€ y juega de forma segura.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Chicken Run Go | Bonos de Casino, Apuestas, Fútbol y Noticias Virales</title>
+    <meta name="description" content="Descubre los mejores bonos de casino en España, noticias de fútbol, apuestas deportivas, polémicas y contenido viral. Gira la ruleta y gana." />
+    <meta name="keywords" content="casino españa, bonos casino, apuestas deportivas, noticias fútbol, viral, ganar dinero, ruleta online" />
+    <meta name="theme-color" content="#000000" />
+    <script type="module" crossorigin src="./assets/index-qT3LPqVf.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BxxynovD.css">
     
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Chicken Run Go - Bonos VIP España">
-    <meta property="og:description" content="La mayor comparativa de casinos móviles con pagos inmediatos.">
-    <meta property="og:url" content="https://chickenrungo.site">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1541278107931-e0065238adba?q=80&w=1200&auto=format&fit=crop">
-    
-    <script src="assets/js/security_elite.js"></script>
-
-    <style>
-        :root {
-            --primary: #ff1e56;
-            --secondary: #ffac41;
-            --accent: #32e0c4;
-            --bg: #0d0d0d;
-            --surface: #1a1a1a;
-            --text: #ffffff;
-            --gold: #f9d423;
-        }
-        * { box-sizing: border-box; }
-        body { 
-            font-family: 'Outfit', sans-serif; 
-            margin: 0; 
-            background: var(--bg); 
-            color: var(--text);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-        
-        /* Navegación */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background: rgba(13, 13, 13, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .logo { font-size: 1.5rem; font-weight: 900; color: var(--gold); text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1541278107931-e0065238adba?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            min-height: 600px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; color: var(--gold); text-shadow: 0 0 20px rgba(249, 212, 35, 0.5); }
-        .hero p { font-size: clamp(1rem, 4vw, 1.3rem); color: #ccc; max-width: 800px; margin-bottom: 30px; }
-        
-        /* Ruleta Interactiva */
-        .wheel-container {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 20px auto;
-        }
-        .wheel {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 10px solid var(--surface);
-            background: conic-gradient(
-                var(--primary) 0deg 45deg,
-                var(--secondary) 45deg 90deg,
-                var(--accent) 90deg 135deg,
-                var(--gold) 135deg 180deg,
-                var(--primary) 180deg 225deg,
-                var(--secondary) 225deg 270deg,
-                var(--accent) 270deg 315deg,
-                var(--gold) 315deg 360deg
-            );
-            transition: transform 4s cubic-bezier(0.15, 0, 0.15, 1);
-            box-shadow: 0 0 30px rgba(255, 30, 86, 0.5);
-        }
-        .wheel-pointer {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 50px;
-            background: white;
-            clip-path: polygon(50% 100%, 0 0, 100% 0);
-            z-index: 10;
-        }
-        .spin-btn {
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: var(--gold);
-            color: black;
-            border: none;
-            border-radius: 50px;
-            font-weight: 900;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(249, 212, 35, 0.4);
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* Secciones */
-        .grid-bonos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            padding: 40px 5%;
-            max-width: 1400px;
-            margin: 20px auto 0;
-        }
-        .card {
-            background: var(--surface);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.3s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .card h2 { font-size: 2.2rem; margin: 15px 0; color: var(--gold); }
-        
-        .cta-main {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-top: auto;
-        }
-        
-        /* Social Proof Popups */
-        #social-proof {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: var(--surface);
-            padding: 15px 25px;
-            border-radius: 15px;
-            border-left: 5px solid var(--accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            display: none;
-            z-index: 10001;
-            animation: slideIn 0.5s ease;
-            max-width: 300px;
-        }
-        @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-        
-        /* Footer Pro */
-        footer {
-            background: #050505;
-            padding: 60px 5% 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: 80px;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-col h4 { color: var(--gold); margin-bottom: 20px; }
-        .footer-col ul { list-style: none; padding: 0; }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a { color: #888; text-decoration: none; transition: 0.3s; }
-        .footer-col ul li a:hover { color: white; }
-        
-        .badges-es {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0;
-            opacity: 0.5;
-            filter: grayscale(1);
-        }
-        .badges-es img { height: 40px; }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            .hero { min-height: 500px; }
-            .nav-links { display: none; }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a data-elite-id="spinwin" target="_blank" class="cta-button">¡RECLAMAR 1500€ YA!</a>
-        <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="#bonos">Bonos</a>
-            <a href="#guias">Guías</a>
-            <a href="privacidad.html">Privacidad</a>
-        </div>
-    </nav>
-
-    <div class="hero">
-        <span style="color: var(--primary); font-weight: bold; letter-spacing: 5px;">EXCLUSIVE VIP 2026</span>
-        <h1>ELIGE TU FORTUNA</h1>
-        <p>Gira la ruleta y descubre tu bono exclusivo verificado en España.</p>
-        
-        <div class="wheel-container">
-            <div class="wheel-pointer"></div>
-            <div class="wheel" id="wheel"></div>
-        </div>
-        <button class="spin-btn" id="spin-trigger">¡GIRAR AHORA!</button>
-    </div>
-    
-    <div id="bonos" class="grid-bonos">
-        <!-- Tarjetas dinámicas o estáticas -->
-        <div class="card" id="card-1">
-            <div style="font-size: 0.8rem; background: var(--primary); padding: 5px 10px; border-radius: 5px; align-self: flex-end;">TOP #1</div>
-            <h2>1500€ + 250 FS</h2>
-            <p style="color: #aaa; margin-bottom: 20px;">Bono de Bienvenida SpinWinera</p>
-            <ul style="text-align: left; padding: 0; list-style: none; color: #ccc; font-size: 0.9rem;">
-                <li style="margin-bottom: 8px;">✅ Registro Instantáneo</li>
-                <li style="margin-bottom: 8px;">✅ RTP Verificado 98.4%</li>
-                <li style="margin-bottom: 8px;">✅ Pagos vía BIZUM</li>
-            </ul>
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091" class="cta-main">ABRIR CUENTA</a>
-        </div>
-        
-        <div class="card" id="card-2" style="border-color: var(--secondary);">
-            <div style="font-size: 0.8rem; background: var(--secondary); padding: 5px 10px; border-radius: 5px; align-self: flex-end;">VIP</div>
-            <h2>4500€ PACK</h2>
-            <p style="color: #aaa; margin-bottom: 20px;">Membresía Elite SpinGranny</p>
-            <ul style="text-align: left; padding: 0; list-style: none; color: #ccc; font-size: 0.9rem;">
-                <li style="margin-bottom: 8px;">✅ Cashback Semanal 20%</li>
-                <li style="margin-bottom: 8px;">✅ Manager VIP 24h</li>
-                <li style="margin-bottom: 8px;">✅ Tiradas sin rollover</li>
-            </ul>
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903" class="cta-main" style="background: linear-gradient(45deg, var(--secondary), #d35400);">RECLAMAR PACK</a>
-        </div>
-    </div>
-    
-    <div id="social-proof">
-        <strong style="color: white; font-size: 1rem;">🚀 ¡Nuevo Bono Reclamado!</strong>
-        <p id="social-text" style="margin: 5px 0 0; color: #ccc; font-size: 0.85rem;"></p>
-    </div>
-
-    <footer>
-        <div class="badges-es">
-            <img src="https://www.ordenacionjuego.es/assets/img/logos/jugarbiensinhoy.png" alt="Jugar Bien">
-            <img src="https://www.ordenacionjuego.es/assets/img/logos/autoprohibicion.png" alt="Autoprohibición">
-            <img src="https://www.ordenacionjuego.es/assets/img/logos/juegoseguro.png" alt="Juego Seguro">
-        </div>
-        
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>CHICKEN RUN GO</h4>
-                <p style="color: #666; font-size: 0.85rem;">Inteligencia Artificial aplicada al Marketing de Afiliación en España.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#guias">Blog Viral</a></li>
-                    <li><a href="cookies.html">Cookies</a></li>
-                    <li><a href="privacidad.html">Privacidad</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Afiliación</h4>
-                <ul>
-                    <li><a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091">SpinWinera</a></li>
-                    <li><a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903">SpinGranny</a></li>
-                </ul>
-            </div>
-        </div>
-        <p style="text-align: center; color: #444; margin-top: 50px;">🔞 Juega con responsabilidad • +18 España</p>
-    </footer>
-
-    <script>
-        // Lógica Ruleta
-        const wheel = document.getElementById('wheel');
-        const trigger = document.getElementById('spin-trigger');
-        let currentRotation = 0;
-
-        trigger.addEventListener('click', () => {
-            const extraRotation = Math.floor(Math.random() * 360) + 1800; // Mínimo 5 vueltas
-            currentRotation += extraRotation;
-            wheel.style.transform = `rotate(${currentRotation}deg)`;
-            
-            trigger.innerText = "¡PROCESANDO PREMIO...";
-            trigger.disabled = true;
-
-            setTimeout(() => {
-                alert("🎁 ¡FELICIDADES! Has desbloqueado el BONO VIP de 4500€. Serás redirigido.");
-                window.location.href = "https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903";
-            }, 4500);
-        });
-
-        // Social Proof Simulator
-        const names = ["Carlos M.", "Lucía R.", "Javier S.", "Marta G.", "Dani P.", "Sofia V."];
-        const cities = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Málaga"];
-        const rewards = ["Bono de 1500€", "VIP Pack 4500€", "250 Tiradas Gratis", "50€ Sin Depósito"];
-
-        function showSocialProof() {
-            const popup = document.getElementById('social-proof');
-            const text = document.getElementById('social-text');
-            
-            const name = names[Math.floor(Math.random()*names.length)];
-            const city = cities[Math.floor(Math.random()*cities.length)];
-            const reward = rewards[Math.floor(Math.random()*rewards.length)];
-
-            text.innerText = `${name} de ${city} acaba de ganar: ${reward}`;
-            popup.style.display = 'block';
-
-            setTimeout(() => { popup.style.display = 'none'; }, 4000);
-            setTimeout(showSocialProof, Math.random() * 15000 + 10000);
-        }
-        setTimeout(showSocialProof, 3000);
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBDJ4W7XZL"></script>
     <script>
@@ -349,21 +18,28 @@
       gtag('js', new Date());
       gtag('config', 'G-VBDJ4W7XZL');
     </script>
+
+    <!-- Security Elite -->
+    <script src="./assets/js/security_elite.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
     <!-- AI Chatbot Widget -->
-    <div id="ai-chat" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 20px var(--primary); z-index: 10001;" onclick="toggleChat()">
+    <div id="ai-chat" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #ff1e56; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 20px #ff1e56; z-index: 10001;" onclick="toggleChat()">
         <span style="font-size: 30px;">🤖</span>
     </div>
-    <div id="chat-window" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; height: 400px; background: #fff; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.5); z-index: 10002; flex-direction: column; overflow: hidden; font-family: sans-serif;">
-        <div style="background: var(--primary); color: #fff; padding: 15px; font-weight: bold; display: flex; justify-content: space-between;">
+    <div id="chat-window" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; height: 400px; background: #111; border: 1px solid #333; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.8); z-index: 10002; flex-direction: column; overflow: hidden; font-family: sans-serif;">
+        <div style="background: #ff1e56; color: #fff; padding: 15px; font-weight: bold; display: flex; justify-content: space-between;">
             <span>Asistente ChickenRunGo</span>
             <span onclick="toggleChat()" style="cursor: pointer;">✕</span>
         </div>
-        <div id="chat-content" style="flex: 1; padding: 15px; overflow-y: auto; color: #333; font-size: 14px;">
+        <div id="chat-content" style="flex: 1; padding: 15px; overflow-y: auto; color: #eee; font-size: 14px; background: #000;">
             <p><strong>🤖 IA:</strong> ¡Hola! Soy el asistente elite de ChickenRunGo. ¿Quieres saber cuáles son los bonos que mejor están pagando ahora mismo?</p>
         </div>
-        <div style="padding: 10px; border-top: 1px solid #eee; display: flex;">
-            <input type="text" id="chat-input" placeholder="Pregunta algo..." style="flex: 1; border: none; padding: 10px; outline: none;">
-            <button onclick="sendMessage()" style="background: var(--primary); border: none; color: #fff; padding: 10px; border-radius: 5px; cursor: pointer;">Enviar</button>
+        <div style="padding: 10px; border-top: 1px solid #333; display: flex; background: #000;">
+            <input type="text" id="chat-input" placeholder="Pregunta algo..." style="flex: 1; border: none; padding: 10px; outline: none; background: #222; color: #fff; border-radius: 5px;">
+            <button onclick="sendMessage()" style="background: #ff1e56; border: none; color: #fff; padding: 10px; border-radius: 5px; cursor: pointer; margin-left: 5px;">Enviar</button>
         </div>
     </div>
 
@@ -378,18 +54,13 @@
             if (input.value.trim()) {
                 content.innerHTML += `<p><strong>Tú:</strong> ${input.value}</p>`;
                 setTimeout(() => {
-                    content.innerHTML += `<p><strong>🤖 IA:</strong> Los bonos VIP de 4500€ están en SpinGranny. ¡Es la apuesta más caliente del mes!</p>`;
+                    content.innerHTML += `<p><strong>🤖 IA:</strong> El bono mas caliente de hoy es el VIP PACK de 4500€ en SpinGranny. ¡Es hora de ganar!</p>`;
                     content.scrollTop = content.scrollHeight;
                 }, 1000);
                 input.value = '';
             }
         }
     </script>
-
-    <!-- Footer Elite -->
-    <footer style="margin-top: 100px; padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 0.8rem;">
-        <p>© 2026 Chicken Run Go - Todos los derechos reservados.</p>
-        <p><a href="dashboard.html" style="color: #444; text-decoration: none;">Acceso Administrador</a></p>
-    </footer>
-</body>
+  </body>
 </html>
+
