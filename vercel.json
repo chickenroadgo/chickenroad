@@ -1,0 +1,47 @@
+﻿{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.css",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    },
+    {
+      "src": "/spinwinera",
+      "dest": "/spinwinera.html"
+    },
+    {
+      "src": "/spingranny",
+      "dest": "/spingranny.html"
+    },
+    {
+      "src": "/blog",
+      "dest": "/blog/index.html"
+    }
+  ],
+  "env": {
+    "CPA_SPINWINERA_URL": "https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091&utm_campaign=&afp10=Streamers",
+    "CPA_SPINGRANNY_URL": "https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903&afp10=Streamers",
+    "SITE_NAME": "ChickenRunGo - Casino España",
+    "ENVIRONMENT": "production"
+  },
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  },
+  "regions": ["fra1"],
+  "public": true
+}
