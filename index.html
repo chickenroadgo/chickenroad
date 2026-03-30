@@ -22,141 +22,246 @@
             background: var(--bg); 
             color: var(--text);
             overflow-x: hidden;
+            line-height: 1.6;
         }
+        
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(13, 13, 13, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .logo { font-size: 1.5rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1541278107931-e0065238adba?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1541278107931-e0065238adba?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            height: 70vh;
+            min-height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            border-bottom: 4px solid var(--primary);
+            padding: 20px;
         }
-        h1 { font-size: 4.5rem; margin: 0; color: var(--gold); text-shadow: 0 0 20px rgba(249, 212, 35, 0.5); }
-        .hero p { font-size: 1.5rem; color: #ccc; max-width: 800px; }
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; color: var(--gold); text-shadow: 0 0 20px rgba(249, 212, 35, 0.5); }
+        .hero p { font-size: clamp(1rem, 4vw, 1.5rem); color: #ccc; max-width: 800px; }
         
         .grid-bonos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: -100px auto 0;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+            max-width: 1400px;
+            margin: -80px auto 0;
         }
         .card {
             background: var(--surface);
             border-radius: 20px;
-            padding: 40px;
+            padding: 30px;
             text-align: center;
             border: 1px solid rgba(255,255,255,0.1);
             transition: 0.3s;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .card h2 { font-size: 2.5rem; margin: 0 0 10px; color: var(--gold); }
-        .card .badge { 
-            background: var(--primary); 
-            padding: 5px 15px; 
-            border-radius: 50px; 
-            font-size: 0.9rem; 
-            font-weight: bold;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .card h2 { font-size: 2.2rem; margin: 15px 0; color: var(--gold); }
+        
         .cta-main {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 18px 40px;
+            display: block;
+            width: 100%;
+            padding: 15px;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: white;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 900;
-            font-size: 1.2rem;
+            border-radius: 12px;
+            font-weight: 800;
             text-transform: uppercase;
-            box-shadow: 0 5px 20px rgba(255, 30, 86, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 30, 86, 0.3);
+            margin-top: auto;
         }
         
-        .blog-section { max-width: 1000px; margin: 60px auto; padding: 20px; }
-        .blog-section h2 { border-left: 5px solid var(--accent); padding-left: 15px; font-size: 2rem; margin-bottom: 30px; }
+        .blog-section { max-width: 1200px; margin: 40px auto; padding: 0 5%; }
+        .section-title { font-size: 1.8rem; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        .section-title::before { content: ""; width: 8px; height: 30px; background: var(--accent); display: inline-block; border-radius: 4px; }
+        
         .article-card {
-            background: rgba(255,255,255,0.05);
-            margin-bottom: 20px;
-            padding: 25px;
+            background: rgba(255,255,255,0.03);
+            margin-bottom: 15px;
+            padding: 20px;
             border-radius: 15px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             transition: 0.3s;
             text-decoration: none;
             color: white;
+            border: 1px solid transparent;
         }
-        .article-card:hover { background: rgba(255,255,255,0.1); }
-        .article-card h3 { margin: 0; font-size: 1.3rem; }
+        .article-card:hover { background: rgba(255,255,255,0.06); border-color: var(--accent); }
+        .article-card h3 { margin: 0; font-size: 1.1rem; }
         
-        .footer { text-align: center; padding: 50px; color: #666; font-size: 0.9rem; }
+        /* Footer */
+        footer {
+            background: #050505;
+            padding: 60px 5% 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 80px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-col h4 { color: var(--gold); margin-bottom: 20px; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: #888; text-decoration: none; transition: 0.3s; }
+        .footer-col ul li a:hover { color: white; }
+        
+        .legal-banner {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #444;
+            font-size: 0.8rem;
+            margin-top: 40px;
+        }
+
+        /* Cookie Notice */
+        #cookie-notice {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            font-size: 0.9rem;
+        }
+        #cookie-notice button { background: var(--accent); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .hero { min-height: 400px; }
+            .grid-bonos { margin-top: -50px; }
+            .nav-links { display: none; } /* En producción esto sería un hamburger menu */
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="logo">CHICKEN RUN GO</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="#bonos">Bonos</a>
+            <a href="#guias">Guías</a>
+            <a href="privacidad.html">Privacidad</a>
+        </div>
+    </nav>
+
     <div class="hero">
         <h1>CHICKEN RUN GO</h1>
         <p>Los Bonos de Casino más Explosivos de España 🇪🇸</p>
-        <p>Gana dinero real con las ofertas exclusivas de 2026</p>
+        <p>Gana dinero real desde tu móvil con ofertas exclusivas</p>
     </div>
     
-    <div class="grid-bonos">
+    <div id="bonos" class="grid-bonos">
         <div class="card">
-            <span class="badge">TOP #1</span>
+            <div style="font-size: 0.8rem; background: var(--primary); padding: 5px 10px; border-radius: 5px; align-self: flex-end;">HOT</div>
             <h2>1500€ + 250 FS</h2>
-            <p style="color: #aaa;">Bono de bienvenida exclusivo en SpinWinera</p>
-            <ul style="text-align: left; margin: 20px 0; color: #ccc;">
-                <li>✅ Registro Instantáneo</li>
-                <li>✅ Retiro en 1 hora</li>
-                <li>✅ Slots con RTP 98%</li>
+            <p style="color: #aaa; margin-bottom: 20px;">Bono de Bienvenida SpinWinera</p>
+            <ul style="text-align: left; padding: 0; list-style: none; color: #ccc; font-size: 0.9rem;">
+                <li style="margin-bottom: 8px;">✅ Pagos Instantáneos (Bizum/Card)</li>
+                <li style="margin-bottom: 8px;">✅ Sin límites de apuesta máxima</li>
+                <li style="margin-bottom: 8px;">✅ Promo exclusiva móvil</li>
             </ul>
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091" class="cta-main">¡JUGAR AHORA!</a>
+            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091" class="cta-main">RECLAMAR 1500€</a>
         </div>
         
         <div class="card" style="border-color: var(--secondary);">
-            <span class="badge" style="background: var(--secondary);">VIP</span>
-            <h2>4500€ PACK</h2>
-            <p style="color: #aaa;">Paquete VIP de Bienvenida en SpinGranny</p>
-            <ul style="text-align: left; margin: 20px 0; color: #ccc;">
-                <li>✅ 350 Tiradas Gratis</li>
-                <li>✅ Cashback Semanal</li>
-                <li>✅ Soporte 24/7</li>
+            <div style="font-size: 0.8rem; background: var(--secondary); padding: 5px 10px; border-radius: 5px; align-self: flex-end;">VIP</div>
+            <h2>4500€ + 350 FS</h2>
+            <p style="color: #aaa; margin-bottom: 20px;">Paquete Elite SpinGranny</p>
+            <ul style="text-align: left; padding: 0; list-style: none; color: #ccc; font-size: 0.9rem;">
+                <li style="margin-bottom: 8px;">✅ Programa VIP Personalizado</li>
+                <li style="margin-bottom: 8px;">✅ Cashback de hasta 20% semanal</li>
+                <li style="margin-bottom: 8px;">✅ Torneos diarios de €10k</li>
             </ul>
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903" class="cta-main" style="box-shadow: 0 5px 20px rgba(255, 172, 65, 0.4);">CONSEGUIR BONO</a>
+            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903" class="cta-main" style="background: linear-gradient(45deg, var(--secondary), #d35400);">CONSEGUIR PACK VIP</a>
         </div>
     </div>
     
-    <div class="blog-section">
-        <h2>Últimas Guías y Trucos Casino</h2>
+    <div id="guias" class="blog-section">
+        <h2 class="section-title">Guías Virales & Estrategias</h2>
         <a href="blog/los-10-mejores-casinos-online-en-españa-2026.html" class="article-card">
-            <div style="font-size: 2rem;">📰</div>
+            <div style="font-size: 1.5rem;">📱</div>
             <div>
-                <h3>Los 10 mejores casinos online en España 2026</h3>
-                <p style="color: #888; font-size: 0.9rem;">Análisis profundo de seguridad y pagos rápidos.</p>
+                <h3>Top 10 Casinos Móviles en España (Rápido & Seguro)</h3>
+                <p style="color: #777; font-size: 0.85rem;">Cómo jugar desde tu Android o iPhone y cobrar al instante.</p>
             </div>
         </a>
         <a href="blog/cómo-ganar-dinero-real-con-tiradas-gratis.html" class="article-card">
-            <div style="font-size: 2rem;">💰</div>
+            <div style="font-size: 1.5rem;">🔥</div>
             <div>
-                <h3>Cómo ganar dinero real con tiradas gratis</h3>
-                <p style="color: #888; font-size: 0.9rem;">Estrategias matemáticas para maximizar tus premios.</p>
+                <h3>Cómo convertir tus Tiradas Gratis en Dinero Real</h3>
+                <p style="color: #777; font-size: 0.85rem;">El secreto para liberar los bonos sin riesgos innecesarios.</p>
             </div>
         </a>
     </div>
-    
-    <div class="footer">
-        <p>🔞 Juega con responsabilidad. +18 años. Solo residentes en España.</p>
-        <p>&copy; 2026 ChickenRunGo - Todos los derechos reservados.</p>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>CHICKEN RUN GO</h4>
+                <p style="color: #666; font-size: 0.85rem;">El portal #1 de comparación de bonos de casino en España para 2026.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#guias">Blog de Estrategia</a></li>
+                    <li><a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091">Mejor Oferta Hoy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Soporte & Legal</h4>
+                <ul>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                    <li><a href="cookies.html">Política de Cookies</a></li>
+                    <li><a href="https://juegoseguro.es">Juego Seguro</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="legal-banner">
+            <p>Atención: Solo mayores de 18 años. Juega con cabeza. Consulta <a href="https://fejar.org" style="color: #666;">FEJAR</a> si necesitas ayuda.</p>
+        </div>
+    </footer>
+
+    <div id="cookie-notice">
+        <span>🍪 Usamos cookies para asegurarte la mejor experiencia de usuario en España.</span>
+        <button onclick="document.getElementById('cookie-notice').style.display='none'">ACEPTAR</button>
     </div>
 </body>
 </html>
