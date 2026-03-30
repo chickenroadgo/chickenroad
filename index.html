@@ -7,60 +7,11 @@
     <meta name="description" content="Descubre los mejores bonos de casino en España, noticias de fútbol, apuestas deportivas, polémicas y contenido viral. Gira la ruleta y gana." />
     <meta name="keywords" content="casino españa, bonos casino, apuestas deportivas, noticias fútbol, viral, ganar dinero, ruleta online" />
     <meta name="theme-color" content="#000000" />
-    <script type="module" crossorigin src="./assets/index-qT3LPqVf.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BxxynovD.css">
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBDJ4W7XZL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VBDJ4W7XZL');
-    </script>
-
-    <!-- Security Elite -->
-    <script src="./assets/js/security_elite.js"></script>
+    <script type="module" crossorigin src="./assets/index-IJs_tok6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-So2Tflr4.css">
   </head>
   <body>
     <div id="root"></div>
-
-    <!-- AI Chatbot Widget -->
-    <div id="ai-chat" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #ff1e56; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 20px #ff1e56; z-index: 10001;" onclick="toggleChat()">
-        <span style="font-size: 30px;">🤖</span>
-    </div>
-    <div id="chat-window" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; height: 400px; background: #111; border: 1px solid #333; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.8); z-index: 10002; flex-direction: column; overflow: hidden; font-family: sans-serif;">
-        <div style="background: #ff1e56; color: #fff; padding: 15px; font-weight: bold; display: flex; justify-content: space-between;">
-            <span>Asistente ChickenRunGo</span>
-            <span onclick="toggleChat()" style="cursor: pointer;">✕</span>
-        </div>
-        <div id="chat-content" style="flex: 1; padding: 15px; overflow-y: auto; color: #eee; font-size: 14px; background: #000;">
-            <p><strong>🤖 IA:</strong> ¡Hola! Soy el asistente elite de ChickenRunGo. ¿Quieres saber cuáles son los bonos que mejor están pagando ahora mismo?</p>
-        </div>
-        <div style="padding: 10px; border-top: 1px solid #333; display: flex; background: #000;">
-            <input type="text" id="chat-input" placeholder="Pregunta algo..." style="flex: 1; border: none; padding: 10px; outline: none; background: #222; color: #fff; border-radius: 5px;">
-            <button onclick="sendMessage()" style="background: #ff1e56; border: none; color: #fff; padding: 10px; border-radius: 5px; cursor: pointer; margin-left: 5px;">Enviar</button>
-        </div>
-    </div>
-
-    <script>
-        function toggleChat() {
-            const win = document.getElementById('chat-window');
-            win.style.display = win.style.display === 'none' ? 'flex' : 'none';
-        }
-        function sendMessage() {
-            const input = document.getElementById('chat-input');
-            const content = document.getElementById('chat-content');
-            if (input.value.trim()) {
-                content.innerHTML += `<p><strong>Tú:</strong> ${input.value}</p>`;
-                setTimeout(() => {
-                    content.innerHTML += `<p><strong>🤖 IA:</strong> El bono mas caliente de hoy es el VIP PACK de 4500€ en SpinGranny. ¡Es hora de ganar!</p>`;
-                    content.scrollTop = content.scrollHeight;
-                }, 1000);
-                input.value = '';
-            }
-        }
-    </script>
   </body>
 </html>
 
