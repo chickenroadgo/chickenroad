@@ -25,6 +25,7 @@
             text-align: center;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
             letter-spacing: 5px;
@@ -85,6 +86,12 @@
         <p>> [REFRESH] Artículos actualizados para SEO Freshness.</p>
         <p>> [INDEX] Sitemap enviado a Google Search Console.</p>
         <p>> [ONLINE] El imperio está funcionando al 100%.</p>
-    </div>
+    <script>
+        const pass = prompt("Introduce la clave ELITE:");
+        if (pass !== "ELITE_ADMIN_2026") {
+            alert("Acceso denegado.");
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 </html>
