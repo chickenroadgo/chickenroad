@@ -7,111 +7,156 @@
     <meta name="description" content="Descubre los mejores bonos casino 2026 en España. Gana 1500€ + 250 tiradas gratis o 4500€ + 350 tiradas VIP. ¡Regístrate y gana dinero real!">
     <style>
         :root {
-            --primary: #ff4d4d;
-            --secondary: #9b59b6;
-            --dark: #1a1a2e;
-            --light: #f5f5f5;
-            --gold: #ffd700;
+            --primary: #ff1e56;
+            --secondary: #ffac41;
+            --accent: #32e0c4;
+            --bg: #0d0d0d;
+            --surface: #1a1a1a;
+            --text: #ffffff;
+            --gold: #f9d423;
         }
+        * { box-sizing: border-box; }
         body { 
-            font-family: 'Inter', sans-serif; 
+            font-family: 'Outfit', sans-serif; 
             margin: 0; 
-            padding: 0; 
-            background: var(--dark); 
-            color: white;
-            line-height: 1.6;
+            background: var(--bg); 
+            color: var(--text);
+            overflow-x: hidden;
         }
-        .header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 60px 20px;
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1541278107931-e0065238adba?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            border-bottom: 2px solid var(--primary);
+            border-bottom: 4px solid var(--primary);
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); text-shadow: 2px 2px 10px rgba(255,215,0,0.5); }
-        .cta-buttons { display: flex; gap: 20px; justify-content: center; margin: 50px 0; flex-wrap: wrap; }
-        .cta-button { 
-            padding: 20px 40px; 
-            background: var(--primary); 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: 800; 
-            font-size: 20px; 
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-            text-transform: uppercase;
+        h1 { font-size: 4.5rem; margin: 0; color: var(--gold); text-shadow: 0 0 20px rgba(249, 212, 35, 0.5); }
+        .hero p { font-size: 1.5rem; color: #ccc; max-width: 800px; }
+        
+        .grid-bonos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: -100px auto 0;
         }
-        .cta-button:hover { transform: scale(1.05); box-shadow: 0 6px 25px rgba(231, 76, 60, 0.6); }
-        .cta-button.vip { 
-            background: linear-gradient(45deg, var(--secondary), #8e44ad); 
-            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
-        }
-        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
-        .stat { 
-            text-align: center; 
-            padding: 30px; 
-            background: rgba(255, 255, 255, 0.05); 
-            border-radius: 20px; 
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        .stat h3 { color: var(--gold); font-size: 1.5rem; margin-bottom: 10px; }
-        .blog-preview { margin: 60px 0; }
-        .blog-post { 
-            margin: 20px 0; 
-            padding: 20px; 
-            background: rgba(255, 255, 255, 0.03); 
-            border-radius: 15px;
-            border-left: 5px solid var(--secondary); 
+        .card {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
             transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
         }
-        .blog-post:hover { background: rgba(255, 255, 255, 0.07); transform: translateX(10px); }
-        .blog-post h3 a { color: white; text-decoration: none; }
-        .status { text-align: center; margin-top: 60px; padding: 30px; background: #2ecc71; color: white; border-radius: 20px; font-weight: bold; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .card h2 { font-size: 2.5rem; margin: 0 0 10px; color: var(--gold); }
+        .card .badge { 
+            background: var(--primary); 
+            padding: 5px 15px; 
+            border-radius: 50px; 
+            font-size: 0.9rem; 
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .cta-main {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 18px 40px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(255, 30, 86, 0.4);
+        }
+        
+        .blog-section { max-width: 1000px; margin: 60px auto; padding: 20px; }
+        .blog-section h2 { border-left: 5px solid var(--accent); padding-left: 15px; font-size: 2rem; margin-bottom: 30px; }
+        .article-card {
+            background: rgba(255,255,255,0.05);
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: white;
+        }
+        .article-card:hover { background: rgba(255,255,255,0.1); }
+        .article-card h3 { margin: 0; font-size: 1.3rem; }
+        
+        .footer { text-align: center; padding: 50px; color: #666; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎰 ChickenRunGo</h1>
-        <p style="font-size: 22px; color: #ccc;">Los mejores bonos de casino online en España 2026</p>
+    <div class="hero">
+        <h1>CHICKEN RUN GO</h1>
+        <p>Los Bonos de Casino más Explosivos de España 🇪🇸</p>
+        <p>Gana dinero real con las ofertas exclusivas de 2026</p>
     </div>
     
-    <div class="container">
-        <div class="cta-buttons">
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091" class="cta-button">🔥 1500€ + 250 TIRADAS</a>
-            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903" class="cta-button vip">💰 4500€ + 350 TIRADAS VIP</a>
+    <div class="grid-bonos">
+        <div class="card">
+            <span class="badge">TOP #1</span>
+            <h2>1500€ + 250 FS</h2>
+            <p style="color: #aaa;">Bono de bienvenida exclusivo en SpinWinera</p>
+            <ul style="text-align: left; margin: 20px 0; color: #ccc;">
+                <li>✅ Registro Instantáneo</li>
+                <li>✅ Retiro en 1 hora</li>
+                <li>✅ Slots con RTP 98%</li>
+            </ul>
+            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=6091" class="cta-main">¡JUGAR AHORA!</a>
         </div>
         
-        <div class="stats">
-            <div class="stat">
-                <h3>🏆 100€ POR LEAD</h3>
-                <p>Comisión directa por cada usuario que deposita 20€.</p>
-            </div>
-            <div class="stat">
-                <h3>🔥 TRÁFICO VIP</h3>
-                <p>Optimizado para Google España y tendencias virales.</p>
-            </div>
-            <div class="stat">
-                <h3>⚡ SISTEMA 24/7</h3>
-                <p>100% automático. La IA trabaja mientras tú descansas.</p>
-            </div>
+        <div class="card" style="border-color: var(--secondary);">
+            <span class="badge" style="background: var(--secondary);">VIP</span>
+            <h2>4500€ PACK</h2>
+            <p style="color: #aaa;">Paquete VIP de Bienvenida en SpinGranny</p>
+            <ul style="text-align: left; margin: 20px 0; color: #ccc;">
+                <li>✅ 350 Tiradas Gratis</li>
+                <li>✅ Cashback Semanal</li>
+                <li>✅ Soporte 24/7</li>
+            </ul>
+            <a href="https://track.betmenaffiliates.com/visit/?bta=42505&nci=5903" class="cta-main" style="box-shadow: 0 5px 20px rgba(255, 172, 65, 0.4);">CONSEGUIR BONO</a>
         </div>
-        
-        <div class="blog-preview">
-            <h2 style="color: var(--gold); text-align: center; font-size: 2rem;">📝 ÚLTIMAS GUÍAS CASINO 2026</h2>
-            <div id="blog-container">
-                <div class="blog-post">
-                    <h3><a href="blog/los-10-mejores-casinos-en-españa-2026.html">Los 10 mejores casinos en España 2026</a></h3>
-                    <p>Análisis profundo de los bonos más jugosos del año...</p>
-                </div>
+    </div>
+    
+    <div class="blog-section">
+        <h2>Últimas Guías y Trucos Casino</h2>
+        <a href="blog/los-10-mejores-casinos-online-en-españa-2026.html" class="article-card">
+            <div style="font-size: 2rem;">📰</div>
+            <div>
+                <h3>Los 10 mejores casinos online en España 2026</h3>
+                <p style="color: #888; font-size: 0.9rem;">Análisis profundo de seguridad y pagos rápidos.</p>
             </div>
-        </div>
-        
-        <div class="status">
-            <h3>🚀 ESTADO DEL SISTEMA: 100% OPERATIVO</h3>
-            <p>Conectado a DeepSeek & OpenClaw para gestión autónoma.</p>
-        </div>
+        </a>
+        <a href="blog/cómo-ganar-dinero-real-con-tiradas-gratis.html" class="article-card">
+            <div style="font-size: 2rem;">💰</div>
+            <div>
+                <h3>Cómo ganar dinero real con tiradas gratis</h3>
+                <p style="color: #888; font-size: 0.9rem;">Estrategias matemáticas para maximizar tus premios.</p>
+            </div>
+        </a>
+    </div>
+    
+    <div class="footer">
+        <p>🔞 Juega con responsabilidad. +18 años. Solo residentes en España.</p>
+        <p>&copy; 2026 ChickenRunGo - Todos los derechos reservados.</p>
     </div>
 </body>
 </html>
