@@ -347,7 +347,47 @@
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX');
     </script>
+    <!-- AI Chatbot Widget -->
+    <div id="ai-chat" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 20px var(--primary); z-index: 10001;" onclick="toggleChat()">
+        <span style="font-size: 30px;">🤖</span>
+    </div>
+    <div id="chat-window" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; height: 400px; background: #fff; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.5); z-index: 10002; flex-direction: column; overflow: hidden; font-family: sans-serif;">
+        <div style="background: var(--primary); color: #fff; padding: 15px; font-weight: bold; display: flex; justify-content: space-between;">
+            <span>Asistente ChickenRunGo</span>
+            <span onclick="toggleChat()" style="cursor: pointer;">✕</span>
+        </div>
+        <div id="chat-content" style="flex: 1; padding: 15px; overflow-y: auto; color: #333; font-size: 14px;">
+            <p><strong>🤖 IA:</strong> ¡Hola! Soy el asistente elite de ChickenRunGo. ¿Quieres saber cuáles son los bonos que mejor están pagando ahora mismo?</p>
+        </div>
+        <div style="padding: 10px; border-top: 1px solid #eee; display: flex;">
+            <input type="text" id="chat-input" placeholder="Pregunta algo..." style="flex: 1; border: none; padding: 10px; outline: none;">
+            <button onclick="sendMessage()" style="background: var(--primary); border: none; color: #fff; padding: 10px; border-radius: 5px; cursor: pointer;">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const win = document.getElementById('chat-window');
+            win.style.display = win.style.display === 'none' ? 'flex' : 'none';
+        }
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const content = document.getElementById('chat-content');
+            if (input.value.trim()) {
+                content.innerHTML += `<p><strong>Tú:</strong> ${input.value}</p>`;
+                setTimeout(() => {
+                    content.innerHTML += `<p><strong>🤖 IA:</strong> Los bonos VIP de 4500€ están en SpinGranny. ¡Es la apuesta más caliente del mes!</p>`;
+                    content.scrollTop = content.scrollHeight;
+                }, 1000);
+                input.value = '';
+            }
+        }
+    </script>
+
+    <!-- Footer Elite -->
+    <footer style="margin-top: 100px; padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 0.8rem;">
+        <p>© 2026 Chicken Run Go - Todos los derechos reservados.</p>
+        <p><a href="dashboard.html" style="color: #444; text-decoration: none;">Acceso Administrador</a></p>
+    </footer>
 </body>
 </html>
-
-
