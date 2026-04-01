@@ -30,8 +30,19 @@
       gtag('js', new Date());
       gtag('config', 'G-VBDJ4W7XZL');
     </script>
+
+    <!-- Telemetría Soberanía V10: Registro de Visita Real -->
+    <script>
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const slug = window.location.hash.split('/').pop() || 'home';
+        const trackUrl = window.telemetryUrl || 'http://localhost:8000';
+        fetch(`${trackUrl}/track_view?slug=${encodeURIComponent(slug)}`, { mode: 'no-cors' })
+          .catch(() => {});
+      })();
+    </script>
     <meta name="theme-color" content="#000000" />
-    <script type="module" crossorigin src="./assets/index-iId3-YNR.js"></script>
+    <script type="module" crossorigin src="./assets/index-BlhAlB3X.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-0CyHoUPn.css">
   </head>
   <body>
