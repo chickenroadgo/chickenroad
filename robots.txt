@@ -1,3 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /*.json$
+
+# Sitemap
 Sitemap: https://chickenrungo.site/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2

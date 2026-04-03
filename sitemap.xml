@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chickenrungo.site/</loc><priority>1.0</priority></url>
-  <url><loc>https://chickenrungo.site/blog</loc><priority>0.8</priority></url>
-  <url><loc>https://chickenrungo.site/blog/las-milicias-chiies-en-irak-“teheran-no-empezo-el-conflicto”</loc><priority>0.6</priority></url>
-  <url><loc>https://chickenrungo.site/blog/el-pentagono-obliga-a-dimitir-al-maximo-mando-del-ejercito-de-tierra</loc><priority>0.6</priority></url>
-  <url><loc>https://chickenrungo.site/blog/la-guerra-de-iran-resucita-el-riesgo-de-estanflacion-50-anos-despues-d</loc><priority>0.6</priority></url>
-  <url><loc>https://chickenrungo.site/blog/no-todos-lo-terminan...-tu-podras?</loc><priority>0.6</priority></url>
-  <url><loc>https://chickenrungo.site/blog/sabes-mas-palabras-de-las-que-crees</loc><priority>0.6</priority></url>
-  <url><loc>https://chickenrungo.site/blog/tienes-6-intentos-y-1-sola-palabra</loc><priority>0.6</priority></url>
+  <url><loc>https://chickenrungo.site/</loc><priority>1.0</priority><changefreq>hourly</changefreq></url>
+  <url><loc>https://chickenrungo.site/#/blog</loc><priority>0.9</priority><changefreq>hourly</changefreq></url>
+  <url><loc>https://chickenrungo.site/#/bonos</loc><priority>0.8</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://chickenrungo.site/#/blog/una-ciertamirada-los-buenos-alcaldes-la-parte-sanade-la-politica-espan</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/tu-reto-diario-en-nivel-facil</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/escandalo-en-la-politica-espanola-lo-que-nadie-te-esta-contando</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/rueda-de-prensa-de-simeone-en-directo</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/trump-dice-que-eeuu-ni-siquiera-ha-empezado-a-destruir-lo-que-queda-en</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/como-ganar-dinero-desde-casa-en-espana-2026-15-metodos-reales-verifica</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/estrategia-para-ganar-en-las-tragamonedas-online-en-espana-guia-expert</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/tienes-6-intentos-y-1-sola-palabra</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/iran-asegura-haber-derribado-otro-caza-f-35-de-eeuu-en-un-ataque-en-el</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/embrutecimiento-y-miedo-el-giro-antiinmigracion-de-bruselas</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/el-viral-de-la-semana-en-espana-que-esta-rompiendo-las-redes-sociales</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
+  <url><loc>https://chickenrungo.site/#/blog/la-polemica-del-partido-de-la-semana-en-laliga-que-tiene-a-espana-divi</loc><priority>0.7</priority><changefreq>weekly</changefreq><lastmod>2026-04-03</lastmod></url>
 </urlset>
